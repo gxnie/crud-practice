@@ -48,20 +48,20 @@
 - **Request Body**:
     ```json
     {
-      "name": "Robbie Updated",
-      "email": "Robbie@example.com Updated",
-      "phone": "010-1234-5678 Updated",
-      "address": "123 Seoul Updated"
+      "name": "Robbie",
+      "email": "Robbie@example.com",
+      "phone": "010-1234-5678",
+      "address": "123 Seoul"
     }
     ```
 - **Response**:
     ```json
     {
       "id": 1,
-      "name": "Robbie Updated",
-      "email": "Robbie@example.com Updated",
-      "phone": "010-1234-5678 Updated",
-      "address": "123 Seoul Updated"
+      "name": "하진이",
+      "email": "wlsdl7520@example.com",
+      "phone": "010-1234-5678",
+      "address": "Daegu"
     }
     ```
 

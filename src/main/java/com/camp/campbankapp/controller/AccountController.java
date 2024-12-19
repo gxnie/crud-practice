@@ -3,8 +3,6 @@ package com.camp.campbankapp.controller;
 import com.camp.campbankapp.dto.Account.AccountBalaceResponseDto;
 import com.camp.campbankapp.dto.Account.AccountRequestDto;
 import com.camp.campbankapp.dto.Account.AccountResponseDto;
-import com.camp.campbankapp.dto.Customer.CustomerRequestDto;
-import com.camp.campbankapp.dto.Customer.CustomerResponseDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

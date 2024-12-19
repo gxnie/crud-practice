@@ -1,3 +1,4 @@
+// 플러그인 : 특정 작업을 위해 모아놓은 task들의 모음집
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.4.0'
@@ -19,16 +20,33 @@ configurations {
     }
 }
 
+// repositories : 라이브러리가 저장된 위치를 정의하고 저장소에서 라이브러리를 가져옴
 repositories {
     mavenCentral()
 }
 
+/**
+ * 의존성 관리 : 프로젝트에서 사용하는 라이브러리나 패키지를 관리
+ * implementation : 컴파일, 런타임 시점 모두 사용
+ * compileOnly : 컴파일 할 때만 사용
+ * runtimeOnly : 런타임 때만 사용
+ * testimplementation : 테스트 할 때만 사용
+ * */
 dependencies {
+    // JPA
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // WEB
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // LOMBOK
     compileOnly 'org.projectlombok:lombok'
-    runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
+
+    // DB ..?
+    runtimeOnly 'com.h2database:h2'
+
+    // TEST
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

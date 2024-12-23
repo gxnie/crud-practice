@@ -9,11 +9,11 @@ public class TransactionRequestDto {
 
     private Integer customerId;
 
-    private LocalDateTime startDate;
+    private String startDate;
 
-    private LocalDateTime endDate;
+    private String endDate;
 
-    public TransactionRequestDto(Integer customerId, LocalDateTime startDate, LocalDateTime endDate) {
+    public TransactionRequestDto(Integer customerId, String startDate, String endDate) {
         this.customerId = customerId;
         this.startDate = startDate;
         this.endDate = endDate;

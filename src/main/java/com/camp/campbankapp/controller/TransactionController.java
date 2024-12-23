@@ -15,11 +15,11 @@ public class TransactionController {
 
     // 거래 내역 조회
     @GetMapping
-    public ResponseEntity<List<TransactionResponseDto>> searchTransaction(TransactionRequestDto requestDto){
+    public ResponseEntity<List<TransactionResponseDto>> getTransaction(@ModelAttribute TransactionRequestDto requestDto){
         List<TransactionResponseDto> transaction = new ArrayList<>();
         transaction.add(new TransactionResponseDto(1001L,101,"DEPOSIT",500.0,"2024-01-15T10:00:00"));
         transaction.add(new TransactionResponseDto(1002L,101,"WITHDRAWAL",200.0,"2024-01-20T14:30:00"));
-        return ResponseEntity.status(HttpStatus.OK).body(transaction);
+        return new ResponseEntity<>(transaction,HttpStatus.OK);
     }
 
     // 거래 생성

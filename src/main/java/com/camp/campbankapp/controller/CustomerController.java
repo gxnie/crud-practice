@@ -27,16 +27,16 @@ public class CustomerController {
      * */
     public ResponseEntity<CustomerResponseDto> createCustomers(@RequestBody CustomerRequestDto customerRequestDto){
         // 요청 처리 로직
-        // Controller 테스트 단계 임으로 API 명세서 (API.md)에서 요구한 Response 데이터를 반환
-        // id는 임시로 값 지정, 그 외의 요청 데이터는 response(응답) Dto에 직접적으로 값 넣어줌
+        // 현재 단계는 Controller 테스트를 위한 단계이므로, API 명세서(API.md)에 정의된 형식으로 응답 데이터를 반환
+        // id는 실제 데이터베이스 연동이 없으므로 임시로 1L을 지정하고,
+        // 나머지 필드는 요청(Request) DTO에서 전달받은 데이터를 사용
         CustomerResponseDto customerResponseDto = new CustomerResponseDto(
                 1L, // id
-                customerRequestDto.getName(), // customerRequestDto에서 이름을 가져온다
-                customerRequestDto.getEmail(), // customerRequestDto에서 이메일을 가져온다
-                customerRequestDto.getPhone(), // customerRequestDto에서 폰번호를 가져온다
-                customerRequestDto.getAddress() // customerRequestDto에서 주소를 가져온다
+                customerRequestDto.getName(), // 요청 Dto에서 이름을 가져온다
+                customerRequestDto.getEmail(), // 요청 Dto에서 이메일을 가져온다
+                customerRequestDto.getPhone(), // 요청 Dto에서 폰번호를 가져온다
+                customerRequestDto.getAddress() // 요청 Dto에서 주소를 가져온다
         );
-        // ResponseEntity
         // 상태코드 CREATED(201)와 응답데이터(customerResponseDto)를 JSON형식으로 반환
         return ResponseEntity.status(HttpStatus.CREATED).body(customerResponseDto);
     }

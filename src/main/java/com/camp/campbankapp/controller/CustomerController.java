@@ -101,8 +101,8 @@ public class CustomerController {
      * ResponseEntity<String> : 응답 본문으로 String 형식으로 반환
      * */
     public ResponseEntity<String> deleteCustomers(@PathVariable Long customerId){
-        // 상태코드 OK(200)과 삭제 성공 메세지("삭제 되었습니다")를 반ㅎ환
-        return ResponseEntity.status(HttpStatus.OK).body("삭제 되었습니다");
+        // 상태코드 OK(200)과 삭제 성공 메세지("삭제 정상적으로 완료되었습니다")를 반ㅎ환
+        return ResponseEntity.status(HttpStatus.OK).body("삭제가 정상적으로 완료되었습니다");
     }
 
 }
